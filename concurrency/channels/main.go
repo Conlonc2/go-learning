@@ -5,7 +5,8 @@ Overall what this app does:
 	2. We then call double(), this sleeps 2 seconds and then returns double the value passed into the function and
 	   relays it back to a varible that is waiting on it
 	3. While waiting for the return value (This is blocking) we run another go rotutne that will increment count while waiting on channel
-	   a. The waiting function will be terminated once the main thread ends, we only use this to see that channel return values are blocking the termination of main thread
+	   a. The waiting function will be terminated once the main thread ends (this is a dirty way to handle shutting a thread down),
+	   we only use this to see that channel return values are blocking the termination of main thread
 */
 
 package main
